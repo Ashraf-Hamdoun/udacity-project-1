@@ -19,6 +19,7 @@
  */
 var sections = document.querySelectorAll("section"); // all sections
 var navMenu = document.querySelector("#navbar__list"); // ul where links will be
+var scrollUpBtn = document.querySelector("#scrollUpBtn"); // button to scroll to the top
 /**
  * End Global Variables
  * Start Helper Functions
@@ -44,7 +45,6 @@ var onscroll = function () {
     // To be ensure that Scroll is inside the section
     var scrollPos = scrollPositionTop + 100;
 
-
     sections.forEach(ele => {
         /* Check the position of the section */
         if (scrollPos >= ele.offsetTop && scrollPos <= ele.offsetTop + (ele.offsetHeight * 0.25)) {
@@ -56,13 +56,20 @@ var onscroll = function () {
             addActiveToSection(currentSection);
         }
     });
+
+    // Show scroll to top button
+    if (scrollPositionTop <= 10) {
+        scrollUpBtn.style.visibility = "hidden";
+    } else {
+        scrollUpBtn.style.visibility = "visible";
+    }
 }
 
 
 // Scroll to anchor ID using scrollTO event
-function GoTo(sectionTop) {
+function GoTo(offSetTop) {
     window.scrollTo({
-        top: sectionTop,
+        top: offSetTop,
         left: 0,
         behavior: 'smooth'
     });
@@ -126,3 +133,8 @@ var addActiveToSection = function (id) {
     selectedSection.classList.add("your-active-class");
 }
 
+// Scroll to the top
+scrollUpBtn.addEventListener('click', () => {
+    const topOfPage = 0;
+    GoTo(topOfPage);
+});

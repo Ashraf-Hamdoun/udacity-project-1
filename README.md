@@ -1,13 +1,25 @@
 # Landing Page Project
 
 ## Table of Contents
+- In this project, we tried to build a "Landing Page" :
+    - This page is composed from :
+        - In the top of the page :
+            - The navbar :
+                - Links of page's parts.
+            - Title of the page.
+        - In the main body, we can find :
+            - 4 sections.
+        - At the bottom :
+            - The footer.
 
-* [Instructions](#instructions)
+- files :
+    - main Page file : index.html
+    - CSS folder that contains : styles.css
+    - JS folder that contains : app.js
+    - ReadMe file
 
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Changes
+    I had made some changes to the project.
+    Such as : 
+        - add an active class to the links.
+        - a button that appear on scrolling and onclick to the top then hide again.
